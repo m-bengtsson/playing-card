@@ -1,0 +1,39 @@
+:root {
+  --red: rgb(192, 0, 0);
+}
+
+* {
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--red);
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 2px solid black;
+  border-radius: 6px;
+  height: 300px;
+  width: 200px;
+  padding: 14px;
+}
+.card > div:nth-child(1) {
+  place-self: start;
+}
+.card > div:nth-child(2) {
+  place-self: center;
+}
+.card > div:nth-child(3) {
+  place-self: end;
+}
