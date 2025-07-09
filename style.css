@@ -4,6 +4,7 @@
 
 * {
   margin: 0;
+  /* border: 2px dashed blue; */
 }
 *,
 *::before,
@@ -13,27 +14,29 @@
 
 body {
   display: grid;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
+  place-items: center;
+  font-size: 36px;
   color: var(--red);
 }
 
 .card {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  border: 2px solid black;
+  border: 1.5px solid black;
   border-radius: 6px;
   height: 300px;
   width: 200px;
-  padding: 14px;
+  padding: 8px;
+}
+
+.card > div {
+  display: grid;
+  place-items: center;
 }
 .card > div:nth-child(1) {
   place-self: start;
 }
-.card > div:nth-child(2) {
-  place-self: center;
-}
 .card > div:nth-child(3) {
   place-self: end;
+  transform: rotate(180deg);
 }
